@@ -1,0 +1,68 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+}
+
+calcite-loader {
+    align-self: center;
+    justify-self: center;
+}
+
+body,
+.resultsContainer,
+.searchBarContainer,
+calcite-shell {
+    background-color: #f8f8f8;
+}
+
+calcite-panel {
+    padding: 0px 12vw;
+}
+
+.header {
+    --calcite-navigation-background: #007ac2;
+}
+
+.searchBarContainer {
+    width: 100%;
+    padding: 0px 12vw;
+}
+
+.searchBar {
+    width: 100%;
+}
+
+.title {
+    color: white;
+    margin: 0px 12vw;
+}
+
+.resultsContainer {
+    padding: 0px 12vw 20px 12vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin-top: 20px;
+}
+
+.card img {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    margin: 0px;
+}
+
+.userArea {
+    margin-right: 12vw;
+}

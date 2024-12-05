@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="initial-scale=1, maximum-scale=1, user-scalable=no"
+        />
+        <title>ArcGISearch</title>
+
+        <script
+            src="https://js.arcgis.com/calcite-components/2.13.2/calcite.esm.js"
+            type="module"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://js.arcgis.com/calcite-components/2.13.2/calcite.css"
+        />
+        <script src="https://js.arcgis.com/4.31/"></script>
+
+        <link rel="stylesheet" href="main.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <link
+            id="arcgis-maps-sdk-theme-light"
+            rel="stylesheet"
+            href="https://js.arcgis.com/4.31/esri/themes/light/main.css"
+        />
+    </head>
+
+    <body>
+        <calcite-loader id="pageLoader"></calcite-loader>
+        <calcite-loader
+            type="determinate"
+            hidden
+            id="progressBar"
+        ></calcite-loader>
+        <calcite-shell content-behind hidden>
+            <calcite-navigation slot="header" class="header">
+                <h1 slot="content-start" class="title">ArcGISearch</h1>
+                <div slot="navigation-secondary" class="searchBarContainer">
+                    <form id="searchForm" autocomplete="off">
+                        <calcite-input
+                            placeholder="Search All Organization Content"
+                            slot="navigation-secondary"
+                            icon="search"
+                            class="searchBar"
+                            name="query"
+                            clearable
+                            autocomplete="off"
+                        >
+                            <calcite-button
+                                iconStart="search"
+                                slot="action"
+                                type="submit"
+                            >
+                                Search
+                            </calcite-button>
+                        </calcite-input>
+                    </form>
+                </div>
+                <div slot="content-end" id="userArea" class="userArea">
+                    
+                </div>
+            </calcite-navigation>
+            <div class="resultsContainer" id="searchResults"></div>
+        </calcite-shell>
+    </body>
+    <script src="main.js"></script>
+</html>
